@@ -3,6 +3,26 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
+    scrollbar-width: thin; 
+    scrollbar-color: #8e8962 #f5f5f5;
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8e8962; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7b654f; 
 }
 
 body {
@@ -164,9 +184,31 @@ nav ul li a:hover {
 .tab-contents ul li{
     list-style: none;
     margin: 0.5em 0;
+    color: #2e3130;
+    font-size: 1.1em;
 }
 
 .tab-contents ul li span{
-    color: #2e3130;
-    font-size: 1.25em;
+    color: #87928c;
+    font-size: 0.9em;
+}
+
+.pro-lan {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pro-lan li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pro-lan li span{
+    color: #2e3130 !important;
+}
+
+.skill-level {
+    font-style: italic;
+    color: #8e8962;
 }
