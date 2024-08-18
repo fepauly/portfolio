@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #dae3e1;
+    color: #2e3130;
+    font-size: 16px; 
+}
+
+#header {
+    width: 100%;
+    height: 100vh;
+}
+
+.logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em; 
+    fill: #2e3130;
+}
+
+.logo-dot {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 5em; 
+    fill: #8e8962;
+}
+
+.container {
+    padding: 0.625em 10%; 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0.625em 1.25em; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #8e8962;
+    font-size: 1.125em; 
+}
+
+nav ul li a:hover {
+    color: #7b654f;
+    font-size: 1.125em; 
+}
+
+.header-text {
+    margin-top: 4em; 
+    font-size: 1.875em; 
+}
+
+.header-text h1 {
+    font-size: 2em; 
+    margin-top: 1.25em; 
+    margin-bottom: 0.625em; 
+}
+.header-text h1 span {
+    color: #8e8962;
+}
+
+.info {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    align-items: flex-start; 
+}
+
+.info div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info i {
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    color: #87928c;
+}
+
+.info span {
+    font-size: 1.1em;
+    margin-left: 2em;
+    color: #87928c;
+}
+
+
+
+/* about */
+
+#about{
+    padding: 3em 0;
+    color: #87928c;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle{
+    color: #7b654f;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 1em 0 1.25em;
+}
+
+.tab-links{
+    margin-right: 2em;
+    font-size: 1.5em;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    color: #8e8962;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 0.1em;
+    background: #7b654f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 0.5em 0;
+}
+
+.tab-contents ul li span{
+    color: #2e3130;
+    font-size: 1.25em;
+}
