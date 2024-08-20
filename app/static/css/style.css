@@ -129,36 +129,38 @@ nav ul li a:hover {
     color: #7b654f;
 }
 
-/* about */
-
-#about{
-    padding: 3em 0;
-    color: #87928c;
-}
-
 .row{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.about-col-2{
+.header-col-2{
     flex-basis: 35%;
 }
 
-.about-col-2 img{
+.header-col-2 img{
     margin-top: 3em;
     width: 75%;
     border-radius: 15px;
 }
-.about-col-1{
+.header-col-1{
     flex-basis: 60%;
+}
+/* about */
+
+#about{
+    padding: 3em 0;
+    color: #87928c;
+    width: 100%;
+    height: 100vh;
 }
 
 .subtitle{
     color: #7b654f;
     font-size: 2.5em;
     font-weight: 600;
+    margin-bottom: 1em;
 }
 
 .tab-titles{
@@ -217,7 +219,12 @@ nav ul li a:hover {
     color: #2e3130 !important;
 }
 
+.lan{
+    flex-basis: 20%;
+}
+
 .skill-level {
     font-style: italic;
     color: #8e8962;
+    flex-basis: 75%;
 }
