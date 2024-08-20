@@ -4,8 +4,12 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     scrollbar-width: thin; 
-    scrollbar-color: #8e8962 #f5f5f5;
+    scrollbar-color: #8e8962 #dae3e1;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 ::-webkit-scrollbar {
     width: 12px; 
@@ -17,7 +21,7 @@
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f5f5f5; 
+    background-color: #dae3e1; 
     border-radius: 6px; 
 }
 
@@ -86,7 +90,7 @@ nav ul li a:hover {
 .header-text h1 {
     font-size: 2em; 
     margin-top: 1.25em; 
-    margin-bottom: 0.625em; 
+    margin-bottom: 0.2em; 
 }
 .header-text h1 span {
     color: #8e8962;
@@ -103,23 +107,27 @@ nav ul li a:hover {
     position: relative;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.info i {
-    font-size: 1.2em;
-    position: absolute;
-    left: 0;
-    color: #87928c;
 }
 
 .info span {
     font-size: 1.1em;
-    margin-left: 2em;
     color: #87928c;
 }
 
+.socials ul li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 0.25em;
+    margin-top: 1em;
+}
 
+.socials ul li i{
+    color: #8e8962;
+}
+
+.socials ul li i:hover{
+    color: #7b654f;
+}
 
 /* about */
 
@@ -134,15 +142,16 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.about-col-1{
+.about-col-2{
     flex-basis: 35%;
 }
 
-.about-col-1 img{
-    width: 100%;
+.about-col-2 img{
+    margin-top: 3em;
+    width: 75%;
     border-radius: 15px;
 }
-.about-col-2{
+.about-col-1{
     flex-basis: 60%;
 }
 
