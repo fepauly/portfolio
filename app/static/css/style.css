@@ -56,6 +56,10 @@ body {
 
 .container {
     padding: 0.625em 10%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 nav {
@@ -63,6 +67,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 nav ul li {
@@ -141,11 +146,34 @@ nav ul li a:hover {
 
 .header-col-2 img{
     margin-top: 3em;
-    width: 75%;
+    width: 65%;
     border-radius: 15px;
 }
 .header-col-1{
     flex-basis: 60%;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    flex-wrap: wrap;
+}
+
+.summary-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 1.25em;
+    gap: 1em;
+    color: #87928c;
+}
+
+.summary-highlight{
+    font-size: 2.5em !important;
+    font-weight: 500 !important;
+    color: #2e3130;
 }
 /* about */
 
