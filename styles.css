@@ -7,12 +7,17 @@
 :root{
     --base: #dae3e1;
     --text-base: #2e3130;
+    --text-base-transparent: #2e31309e;
     --text-light: #87928c;
     --highlight-light: #8e8962;
     --highlight-light-transparent: #8e896237;
     --highlight-dark: #7b654f;
     --highlight-dark-transparent: #7b654f37;
 }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 body{
     font-family: 'Montserrat', sans-serif;
@@ -340,6 +345,30 @@ h3 {
                     left: 0;
                     height: 100%;
                     object-fit: cover;
+                    transition: ease 3s all;
+                }
+                figcaption{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-color: var(--text-base-transparent);
+                    color: rgb(229, 229, 229);
+                    text-align: center;
+                    padding: 10px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: ease 3s all;
+                }
+
+                &:hover{
+                    figcaption{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    img{
+                        transform: scale(1.1);
+                    }
                 }
             }
         }
