@@ -57,6 +57,12 @@ header{
             font-size: 5em; 
             fill: var(--highlight-light);
         }
+
+        &:hover{
+            .logo-text{
+                fill: var(--highlight-light);
+            }
+        }
     }
 
     nav {
