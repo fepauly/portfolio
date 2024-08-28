@@ -319,8 +319,8 @@ h3 {
     }
 }
 
-.education{
-    .studies{
+.education, .experience{
+    .studies, .work-experience{
         display: flex;
         gap:30px;
 
