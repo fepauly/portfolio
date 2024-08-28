@@ -338,6 +338,9 @@ h3 {
             }
             p{
                 margin-bottom: 10px;
+                span{
+                    font-weight: 800;
+                }
             }
             figure{
                 width: 100%;
