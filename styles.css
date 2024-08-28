@@ -198,7 +198,13 @@ h1{
         img{
             max-width: 420px;
             border-radius: 30px;
+            object-fit: cover;
+            transition: ease 3s all;
+            &:hover{
+                transform: scale(1.05);
+            }
         }
+
     }
 }
 
