@@ -44,23 +44,25 @@ header{
 
     .logo-holder{
         padding: 10px;
-        .logo-text {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 2.5em; 
-            fill: var(--text-base);
-        }
-        
-        .logo-dot {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 400;
-            font-size: 5em; 
-            fill: var(--highlight-light);
+        p{
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--text-base);
+            span{
+                color: var(--highlight-light);
+                font-size: 64px;
+            }
         }
 
         &:hover{
-            .logo-text{
-                fill: var(--highlight-light);
+            p{
+                color: var(--highlight-light);
+            }
+        }
+        @media (max-width:1024px) {
+            font-size: 32px;
+            span{
+                font-size: 48px;
             }
         }
     }
