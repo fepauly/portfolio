@@ -49,7 +49,7 @@
                         <span>Felix Pauly</span>
                     </h1>
                     <p>
-                        Software Engineer
+                        Software Developer
                     </p>
                 </div>
                 <div class="social-links">
@@ -280,9 +280,43 @@
         </section>
         <section class="projects container" id="projects">
             <h2>
-                <small>Recent</small>
+                <small>Previous</small>
                 Projects
             </h2>
+            <div class="previous-projects">
+                <article>
+                    <h3>vECU Level 1 for Rear Axle Steering</h3>
+                    <div>work related</div>
+                    <p><strong>Developed a virtual ECU (vECU) for SIL simulation of rear axle steering control.</strong></p>
+                    <ul>
+                        <li>Prepared target code for ECU simulation on a host computer.</li>
+                        <li>Created SIL adapters for COM services, motor control abstraction layer etc. and designed a sequential event handler.</li>
+                        <li>Integrated vECU with rear axle steering and motor control models in a SIL environment.</li>
+                        <li>Configured simulation and executed comprehensive test cases.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>CI/CD Pipelines for SWC Build & Linking</h3>
+                    <div>work related</div>
+                    <p><strong>Developed scalable CI/CD pipelines for SWC compilation and linking using Conan & CMake.</strong> </p>
+                    <ul>
+                        <li>Generalized SWC build for multiple ECUs with Conan and CMake integration.</li>
+                        <li>Utilized a Jenkins pipeline, parallelized across Conan profiles for various targets and SIL builds.</li>
+                        <li>Used Docker for build environments; created pipelines for linking processes and A2L updates/merges.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Tool Development for CI and Developer Use</h3>
+                    <div>work related</div>
+                    
+                    <p><strong>Created versatile CLI tools for CI build and test processes, usable locally by developers.</strong> </p>
+                    <ul>
+                        <li>Developed Python-based CLI tools for code generation (MATLAB, Targetlink) and static code/model analysis (Astree, MXAM).</li>
+                        <li>Integrated tools as GitHub Actions for seamless CI integration in workflows.</li>
+                        <li>Provided flexible deployment options for both local and CI environments.</li>
+                    </ul>
+                </article>
+            </div>
         </section>
     </main>
 </body>
