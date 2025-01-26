@@ -427,7 +427,7 @@ h3 {
 .projects {
     .bento-grid{
         display: grid;
-        grid-gap: 30px;
+        grid-gap: 40px;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(4, 1fr);
         height: 960px;
@@ -443,7 +443,8 @@ h3 {
         .bento-item{
             padding: 30px;
             background-color: var(--highlight-dark-transparent);
-            border-radius: 15px;
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
             @media(max-width:768px){
                 height: 240px;
             }
@@ -470,6 +471,10 @@ h3 {
                     grid-column: span 2;
                     grid-row: span 2;
                 }
+            }
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             }
         }
     }
