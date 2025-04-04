@@ -3,318 +3,460 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felix Pauly Portfolio</title>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet">
+    <title>Felix Pauly | Software Engineer</title>
+    <meta name="description" content="Portfolio of Felix Pauly, Software Engineer with experience in automotive software development">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/svg" href="./img/logo.svg">
-    <script src="./scripts.js"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <div class="theme-toggle">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+
     <header id="home">
-        <a href="#home" class="logo-holder">
-            <p>felix<span>.</span></p>
-        </a>
-        <nav>
-            <ul id="menu">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-            </ul>
-            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
-                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
-                  </svg>
-                  
+        <div class="header-content container">
+            <a href="#home" class="logo-holder">
+                <div class="logo">
+                    <span>fp</span>
+                </div>
             </a>
-        </nav>
+            <nav>
+                <ul id="menu">
+                    <li>
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li>
+                        <a href="#skills" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#education" class="nav-link">Education</a>
+                    </li>
+                    <li>
+                        <a href="#experience" class="nav-link">Experience</a>
+                    </li>
+                    <li>
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <button class="mobile-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <section class="hero container">
-            <div class="hero-left">
-                <div>
-                    <h1><small>Hi, I'm</small>
-                        <span>Felix Pauly</span>
-                    </h1>
-                    <p>
-                        Software Developer
-                    </p>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.github.com/fepauly"><i class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/felix-pauly"><i class="fa fa-linkedin"></i></a>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text" data-aos="fade-right">
+                        <span class="subtitle">Hi there, I'm</span>
+                        <h1>Felix <span>Pauly</span></h1>
+                        <h2 class="typing">Software Engineer</h2>
+                        <p>currently working in automotive software development with experience in CI/CD pipelines and virtual ECU simulation.</p>
+                        <div class="cta-buttons">
+                            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                            <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://www.github.com/fepauly" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/felix-pauly" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:f.pauly97@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="hero-image" data-aos="fade-left">
+                        <div class="image-wrapper">
+                            <img src="./img/me.jpg" alt="Felix Pauly - Software Engineer" width="100%">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-right">
-                <img src="./img/me.jpg" alt="Felix Pauly" width="100%">
+            <div class="scroll-down">
+                <a href="#skills">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </section>
-        <section class="summary container">
-            <div class="marquee">
-                <div class="track">
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            B.SC
-                        </div>
-                        <p>Mechanical<br>Engineering</p>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-code"></i>
+                        <h3>2+</h3>
+                        <p>Years Experience</p>
                     </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            M.SC
-                        </div>
-                        <p>Mechanical Engineering<br>w/ applied CS</p>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>M.SC</h3>
+                        <p>Engineering & CS</p>
                     </div>
-                    <div class="summary-item">
-                        <p class="summary-highlight">
-                            Dev
-                        </p>
-                        <p>Automotive<br>Industry</p>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-car"></i>
+                        <h3>SIL</h3>
+                        <p>Level 1-3 Experience</p>
                     </div>
-                    <div class="summary-item">
-                        <p class="summary-highlight">
-                            2
-                        </p>
-                        <p>Years<br>of experience</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            SIL
-                        </div>
-                        <p>Experience<br>Level 1-3</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            CI/CD
-                        </div>
-                        <p>Experience<br>w/ GH Actions/Jenkins</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            AUTOSAR
-                        </div>
-                        <p>Experience w/<br>SIL Setup</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            B.SC
-                        </div>
-                        <p>Mechanical<br>Engineering</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            M.SC
-                        </div>
-                        <p>Mechanical Engineering<br>w/ applied CS</p>
-                    </div>
-                    <div class="summary-item">
-                        <p class="summary-highlight">
-                            Dev
-                        </p>
-                        <p>Automotive<br>Industry</p>
-                    </div>
-                    <div class="summary-item">
-                        <p class="summary-highlight">
-                            1.5
-                        </p>
-                        <p>Years<br>of experience</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            SIL
-                        </div>
-                        <p>Experience<br>Level 1-3</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            CI/CD
-                        </div>
-                        <p>Experience<br>w/ GH Actions</p>
-                    </div>
-                    <div class="summary-item">
-                        <div class="summary-highlight">
-                            AUTOSAR
-                        </div>
-                        <p>Experience w/<br>SIL Setup</p>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-cogs"></i>
+                        <h3>CI/CD</h3>
+                        <p>Pipeline Expert</p>
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="skills container" id="skills">
-            <h2>
-                <small>About me</small>
-                Skills
-            </h2>
-            <div class="holder-skills">
-                <div class="left-column">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>Matlab</li>
-                        <li>Groovy</li>
-                    </ul>
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>GH Actions/Jenkins</li>
-                        <li>Docker</li>
-                        <li>Conan</li>
-                        <li>CMake</li>
-                        <li>Synopsis Silver</li>
-                    </ul>
-                </div>
-                <div class="right-column">
-                    <h3>A bit about me</h3>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">About me</span>
+                <h2 class="section-title">My Skills & Background</h2>
+            </div>
+            
+            <div class="about-container">
+                <div class="about-content" data-aos="fade-right">
                     <p>
                         Hi, I'm Felix, a 27-year-old software engineer based in Frankfurt, Germany. 
                         I've always had a passion for technology, which started early on. 
-                        I kicked off my journey with a Bachelor's degree in Mechanical Engineering and later completed my Master's in Mechanical Engineering with a focus on applied computer science. 
-                        That set the foundation for my career, and now I work in the automotive industry as a Software Engineer. 
-                        I love applying my knowledge to different projects while constantly learning something new.<br>
-                        When I'm not coding, you'll probably find me hanging out with friends, trying out new sports or restaurants in Frankfurt, or playing the piano. 
+                        I kicked off my journey with a Bachelor's degree in Mechanical Engineering and later completed my Master's in Mechanical Engineering with a focus on applied computer science.
                     </p>
+                    <p>
+                        Now I work in the automotive industry as a Software Engineer, applying my knowledge to different projects while constantly learning something new.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll probably find me hanging out with friends, trying out new sports or restaurants in Frankfurt, or playing the piano.
+                    </p>
+                </div>
+
+                <div class="skills-container" data-aos="fade-left">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-grid">
+                            <div class="skill">
+                                <div class="skill-name">Python</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">C</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">Groovy</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="skill">
+                                <div class="skill-name">Matlab</div>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Technologies</h3>
+                        <div class="tag-cloud">
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">GitHub Actions</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Conan</span>
+                            <span class="tag">CMake</span>
+                            <span class="tag">Synopsis Silver</span>
+                            <span class="tag">AUTOSAR</span>
+                            <span class="tag">SIL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
         <section class="education container" id="education">
-            <h2>
-                <small>My Studies</small>
-                Education
-            </h2>
-            <div class="studies">
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./img/ba_t.png" alt="RPTU Kaiserlautern/Landau" width="100%">
-                            <figcaption>AI generated image</figcaption>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Studies</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-feature">
+                            <i class="fas fa-university"></i>
                         </div>
-                    </figure>
-                    <h3>B.Sc. Mechanical Engineering</h3>
-                    <div>2016-2021</div>
-                    <p>
-                        <span>RPTU Kaiserslautern/Landau</span>
-                    </p>
-                    <p>
-                        <span>Thesis:</span> Programming and optimization of object and coordinate recognition for a pick & place application
-                    </p>
-                    <p>
-                        <span>Final Grade:</span> 2.3
-                    </p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./img/sofa.png" alt="RPTU Kaiserlautern/Landau" width="100%">
-                            <figcaption>AI generated image</figcaption>
+                        <h3>B.Sc. Mechanical Engineering</h3>
+                        <span class="timeline-date">2016-2021</span>
+                        <p class="timeline-location">RPTU Kaiserslautern/Landau</p>
+                        <div class="timeline-details">
+                            <p><strong>Thesis:</strong> Programming and optimization of object and coordinate recognition for a pick & place application</p>
+                            <p><strong>Final Grade:</strong> 2.3</p>
                         </div>
-                    </figure>
-                    <h3>M.Sc. Mechanical Engineering w/ applied Computer Science</h3>
-                    <div>2021-2023</div>
-                    <p>
-                        <span>RPTU Kaiserslautern/Landau</span>
-                    </p>
-                    <p>
-                        <span>Thesis:</span> Selection of a suitable software tool for the simulation
-                        of soft robots using beam theory
-                    </p>
-                    <p>
-                        <span>Final Grade:</span> 1.1
-                    </p>
-                </article>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-feature">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>M.Sc. Mechanical Engineering w/ applied Computer Science</h3>
+                        <span class="timeline-date">2021-2023</span>
+                        <p class="timeline-location">RPTU Kaiserslautern/Landau</p>
+                        <div class="timeline-details">
+                            <p><strong>Thesis:</strong> Selection of a suitable software tool for the simulation of soft robots using beam theory</p>
+                            <p><strong>Final Grade:</strong> 1.1</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="experience container" id ="experience">
-            <h2>
-                <small>Recent</small>
-                Work Experience
-            </h2>
-            <div class="work-experience">
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./img/car.png" alt="CAR" width="100%">
-                            <figcaption>AI generated image</figcaption>
+
+        <section class="experience container" id="experience">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Career Path</span>
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-feature">
+                            <i class="fas fa-car-side"></i>
                         </div>
-                    </figure>
-                    <h3>Software Developer</h3>
-                    <div>2023-current</div>
-                    <p>
-                        <span>ASAP Engineering GmbH</span>
-                    </p>
-                    <p>
-                        Project based software development in automotive industry with focus on CI/CD pipelines and development of
-                        Virtual ECUs (Level 1-3) for SIL-based virtual validation. I am currently the <strong>Product Owner</strong> for Jenkins CI/CD Software Build pipelines.
-                    </p>
-                </article>
-                <article>
-                    <figure>
-                        <div>
-                            <img src="./img/labview.png" alt="LabView" width="100%">
-                            <figcaption>AI generated image</figcaption>
+                        <h3>Software Developer</h3>
+                        <span class="timeline-date">2023-Present</span>
+                        <p class="timeline-location">ASAP Engineering GmbH</p>
+                        <div class="timeline-details">
+                            <p>Project-based software development in the automotive industry with focus on CI/CD pipelines and development of Virtual ECUs (Level 1-3) for SIL-based virtual validation.</p>
+                            <p><span class="highlight">Current role: Product Owner</span> for Jenkins CI/CD Software Build pipelines.</p>
                         </div>
-                    </figure>
-                    <h3>Student Worker</h3>
-                    <div>2021-2023</div>
-                    <p>
-                        <span>Chair of Computational Physics in Engineering, RPTU Kaiserslautern/Landau</span>
-                    </p>
-                    <p>
-                        Development of test benches using LabView and integration and commissioning of measurement technology.
-                    </p>
-                </article>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-feature">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3>Student Worker</h3>
+                        <span class="timeline-date">2021-2023</span>
+                        <p class="timeline-location">Chair of Computational Physics in Engineering, RPTU Kaiserslautern/Landau</p>
+                        <div class="timeline-details">
+                            <p>Development of test benches using LabView and integration and commissioning of measurement technology.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+
         <section class="projects container" id="projects">
-            <h2>
-                <small>Previous</small>
-                Projects
-            </h2>
-            <div class="previous-projects">
-                <article>
-                    <h3>vECU Level 1 for Rear Axle Steering</h3>
-                    <div>work related</div>
-                    <p><strong>Developed a virtual ECU (vECU) for SIL simulation of rear axle steering control.</strong></p>
-                    <ul>
-                        <li>Prepared target code for ECU simulation on a host computer.</li>
-                        <li>Created SIL adapters for COM services, motor control abstraction layer etc. and designed a sequential event handler.</li>
-                        <li>Integrated vECU with rear axle steering and motor control models in a SIL environment.</li>
-                        <li>Configured simulation and executed comprehensive test cases.</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>CI/CD Pipelines for SWC Build & Linking</h3>
-                    <div>work related</div>
-                    <p><strong>Developed scalable CI/CD pipelines for SWC compilation and linking using Conan & CMake.</strong> </p>
-                    <ul>
-                        <li>Generalized SWC build for multiple ECUs with Conan and CMake integration.</li>
-                        <li>Utilized a Jenkins pipeline, parallelized across Conan profiles for various targets and SIL builds.</li>
-                        <li>Used Docker for build environments; created pipelines for linking processes and A2L updates/merges.</li>
-                    </ul>
-                </article>
-                <article>
-                    <h3>Tool Development for CI and Developer Use</h3>
-                    <div>work related</div>
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-header">
+                        <i class="fas fa-car-side"></i>
+                        <h3>vECU Level 1 for Rear Axle Steering</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-tag">Work Related</p>
+                        <p class="project-description">Developed a virtual ECU (vECU) for SIL simulation of rear axle steering control.</p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check-circle"></i> Prepared target code for ECU simulation</li>
+                            <li><i class="fas fa-check-circle"></i> Created SIL adapters for COM services</li>
+                            <li><i class="fas fa-check-circle"></i> Designed sequential event handler</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated with steering and motor models</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-badge">SIL</span>
+                            <span class="tech-badge">ECU</span>
+                            <span class="tech-badge">AUTOSAR</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>CI/CD Pipelines for SWC Build & Linking</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-tag">Work Related</p>
+                        <p class="project-description">Developed scalable CI/CD pipelines for SWC compilation and linking using Conan & CMake.</p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check-circle"></i> Generalized SWC build for multiple ECUs</li>
+                            <li><i class="fas fa-check-circle"></i> Utilized Jenkins pipeline with parallelization</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented Docker build environments</li>
+                            <li><i class="fas fa-check-circle"></i> Created A2L update/merge pipelines</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-badge">Jenkins</span>
+                            <span class="tech-badge">Docker</span>
+                            <span class="tech-badge">Conan</span>
+                            <span class="tech-badge">CMake</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tool Development for CI and Developer Use</h3>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-tag">Work Related</p>
+                        <p class="project-description">Created versatile CLI tools for CI build and test processes, usable locally by developers.</p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check-circle"></i> Developed Python-based CLI tools</li>
+                            <li><i class="fas fa-check-circle"></i> Integrated with GitHub Actions</li>
+                            <li><i class="fas fa-check-circle"></i> Created code generation tools</li>
+                            <li><i class="fas fa-check-circle"></i> Implemented static analysis tools</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">GitHub Actions</span>
+                            <span class="tech-badge">CLI</span>
+                            <span class="tech-badge">MATLAB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact container" id="contact">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Frankfurt, Germany</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:f.pauly97@gmail.com">f.pauly97@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin-in"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/felix-pauly" target="_blank">linkedin.com/in/felix-pauly</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p><a href="https://www.github.com/fepauly" target="_blank">github.com/fepauly</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="https://formsubmit.co/f.pauly97@gmail.com" method="POST" data-aos="fade-left">
+                    <!-- FormSubmit Anti-Spam Honeypot -->
+                    <input type="text" name="_honey" style="display:none">
                     
-                    <p><strong>Created versatile CLI tools for CI build and test processes, usable locally by developers.</strong> </p>
-                    <ul>
-                        <li>Developed Python-based CLI tools for code generation (MATLAB, Targetlink) and static code/model analysis (Astree, MXAM).</li>
-                        <li>Integrated tools as GitHub Actions for seamless CI integration in workflows.</li>
-                        <li>Provided flexible deployment options for both local and CI environments.</li>
-                    </ul>
-                </article>
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <!-- Success Page Redirect -->
+                    <input type="hidden" name="_next" value="https://fepauly.github.io/thank-you.html">
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="_subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <span>fp</span>
+                    </div>
+                    <p>Felix Pauly</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#skills">About</a>
+                    <a href="#education">Education</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.github.com/fepauly" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/felix-pauly" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:f.pauly97@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Felix Pauly. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="./scripts.js"></script>
 </body>
 </html>
