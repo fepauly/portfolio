@@ -11,6 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme initializer - prevents flash -->
+    <script>
+        // Fügt eine Preload-Klasse hinzu, um Übergänge während des Ladens zu deaktivieren
+        document.documentElement.classList.add('preload');
+        
+        // Prüft das gespeicherte Theme und wendet es sofort an
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.body.classList.add('dark-theme');
+        }
+        
+        // Entfernt die Preload-Klasse nach dem Laden, um Übergänge zu ermöglichen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.documentElement.classList.remove('preload');
+            }, 50);
+        });
+    </script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" type="image/svg" href="./img/logo.svg">

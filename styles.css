@@ -1,5 +1,6 @@
 /* Modern Portfolio Styles for Felix Pauly */
 
+/* Hinzufügen des Theme-Loaders, um Flash zu vermeiden */
 :root {
   /* Modern color scheme */
   --primary: #2d4059;
@@ -31,6 +32,11 @@
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
+}
+
+/* Add a preload state to prevent flash */
+.preload * {
+  transition: none !important;
 }
 
 /* Light/Dark theme variables */
