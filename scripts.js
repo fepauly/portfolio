@@ -80,6 +80,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Waving hand animation
+    const wavingHand = document.querySelector('.waving-hand');
+    
+    // Function to show and hide the waving hand
+    function animateWavingHand() {
+        // Show the hand
+        wavingHand.classList.add('visible');
+        
+        // Hide it after waving for 3 seconds
+        setTimeout(() => {
+            wavingHand.classList.remove('visible');
+        }, 4000);
+    }
+    
+    // Initial animation when scrolled to the about section
+    let hasAnimatedHand = false;
+    const aboutSection = document.getElementById('skills');
+    
+    function checkWavingHandVisibility() {
+        if (!hasAnimatedHand) {
+            const rect = aboutSection.getBoundingClientRect();
+            // If the about section is visible in the viewport
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                setTimeout(animateWavingHand, 800); // Delay the first appearance by 800ms
+                hasAnimatedHand = true;
+                
+                // Set up periodic animations
+                setInterval(() => {
+                    // Only animate if the user is likely still in the about section
+                    if (aboutSection.getBoundingClientRect().top < window.innerHeight && 
+                        aboutSection.getBoundingClientRect().bottom > 0) {
+                        animateWavingHand();
+                    }
+                }, 8000); // Show every 8 seconds
+                
+                // Remove this scroll listener after first animation
+                window.removeEventListener('scroll', checkWavingHandVisibility);
+            }
+        }
+    }
+    
+    // Check on scroll and also immediately after page load
+    window.addEventListener('scroll', checkWavingHandVisibility);
+    setTimeout(checkWavingHandVisibility, 1500); // Also check shortly after page load
+
     // Typing effect for hero section
     const typingElement = document.querySelector('.typing');
     if (typingElement) {

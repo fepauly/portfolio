@@ -602,9 +602,42 @@ section {
   align-items: center;
 }
 
+.about-content {
+  position: relative;
+}
+
 .about-content p {
   margin-bottom: 1.5rem;
   color: var(--text-color);
+}
+
+/* Waving hand animation */
+.waving-hand {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0;
+  transform: translateY(20px) rotate(0deg);
+  transition: opacity 0.3s ease, transform 0.5s ease;
+  z-index: 2;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+  transform-origin: 75% 75%;
+}
+
+.waving-hand.visible {
+  opacity: 1;
+  transform: translateY(0) rotate(0deg);
+  animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
 }
 
 .skills-container {
