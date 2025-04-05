@@ -399,7 +399,7 @@ h1 span::after {
   gap: 1rem;
 }
 
-social-links a {
+.social-links a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -558,6 +558,7 @@ social-links a {
 /* Section styles */
 section {
   padding: 6rem 0;
+
 }
 
 .section-header {
@@ -571,11 +572,13 @@ section {
   position: relative;
   display: inline-block;
   margin-bottom: 1rem;
+  margin-top: 4rem;
 }
 
 .section-title {
   font-size: var(--text-4xl);
   margin-bottom: 1rem;
+  margin-top: 5.5rem;
   position: relative;
   display: inline-block;
 }
@@ -974,22 +977,24 @@ section {
 
 /* Contact Section */
 .contact-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  display: flex;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
   background-color: var(--card-bg);
   border-radius: var(--border-radius);
   box-shadow: 0 5px 15px var(--shadow);
@@ -1002,53 +1007,33 @@ section {
 }
 
 .contact-item i {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--secondary);
+  background-color: rgba(234, 84, 85, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .contact-item h3 {
-  margin-bottom: 0.2rem;
-  font-size: var(--text-lg);
+  margin-bottom: 0.5rem;
+  font-size: var(--text-xl);
 }
 
 .contact-item p {
   margin: 0;
   color: var(--text-muted);
+  font-size: var(--text-lg);
 }
 
-.contact-form {
-  background-color: var(--card-bg);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 5px 15px var(--shadow);
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: var(--transition);
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--secondary);
-  box-shadow: 0 0 0 3px rgba(234, 84, 85, 0.3);
+/* Responsive design for contact info */
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Footer */
