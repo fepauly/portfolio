@@ -501,9 +501,10 @@ h1 span::after {
 }
 
 .stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 .stat-item {
@@ -514,6 +515,7 @@ h1 span::after {
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  flex: 1;
 }
 
 .stat-item:hover {
@@ -881,7 +883,7 @@ section {
 /* Project Cards */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 

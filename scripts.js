@@ -83,7 +83,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typing effect for hero section
     const typingElement = document.querySelector('.typing');
     if (typingElement) {
-        const titles = ['Software Engineer', 'CI/CD Specialist', 'Mechanical Engineering Background'];
+        const titles = [
+            'Bridging Mechanics & Code', 
+            'Driving CI/CD Innovations', 
+            'Mastering Test Benches & Automation'
+        ];
         let titleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
