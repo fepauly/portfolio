@@ -1306,3 +1306,15 @@ nav ul.active li:nth-child(6) { transition-delay: 0.6s; }
 [data-aos].aos-animate {
   pointer-events: auto;
 }
+
+/* Impressum Section */
+.impressum-content {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.impressum-content a {
+  color: var(--secondary);
+  text-decoration: underline;
+}
