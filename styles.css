@@ -507,6 +507,19 @@ h1 span::after {
   flex-wrap: nowrap;
 }
 
+@media (max-width: 768px) {
+  .stats-grid {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-item {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .stat-item {
   text-align: center;
   padding: 2rem 1rem;
